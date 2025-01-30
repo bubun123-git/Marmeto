@@ -299,7 +299,7 @@ html {
   width: 393px;
   height: auto; /* Adjusted to fit content */
   background: #F9F1E7;
-  margin-top: 30px;
+  margin-top: 40px;
   padding: 60px; /* Reduced padding for more balance */
   box-sizing: border-box;
   position: relative;
@@ -364,3 +364,145 @@ html {
   color: white;
   border-color: #B88E2F;
 }
+
+
+
+
+/* Ensure Fetched Data Aligns Under Header */
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;  /* Align all items to the left */
+  width: 100%;  /* Ensure it spans the full width available */
+  background: #fff;
+  padding: 10px 0;
+  margin-left: 40px; /* Align with table-header margin */
+  margin-right: 40px; /* Align with table-header margin */
+  margin-top: 40px;  /* Move the entire fetch data section slightly down */
+}
+
+/* Proper Alignment for Each Column */
+.product-info {
+  width: 350px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.product-image {
+  width: 108px;
+  height: 105px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.product-price{
+  width: 180px;
+  text-align: center; /* Ensure centered content */
+  margin-left: 15px;  /* Move these elements slightly to the right */
+  color: #9F9F9F;  /* Set the text color */
+}
+
+
+.product-quantity {
+  width: 120px;
+  text-align: center; 
+  margin-left: 15px;  /* Ensure quantity is aligned correctly */
+  
+  font-family: Poppins, sans-serif;  /* Apply Poppins font */
+  font-size: 16px;  /* Set font size */
+  font-weight: 400;  /* Set font weight */
+  line-height: 24px;  /* Set line height */
+  color: #9F9F9F;  /* Set the text color */
+}
+
+.product-name {
+  margin-left: 70px; /* Move the product name slightly to the right */
+  
+  font-family: Poppins, sans-serif;  /* Apply Poppins font */
+  font-size: 16px;  /* Set font size */
+  font-weight: 400;  /* Set font weight */
+  line-height: 24px;  /* Set line height */
+  text-align: left;  /* Align text to the left */
+  text-underline-position: from-font;  /* Underline position from font */
+  text-decoration-skip-ink: none;  /* Ensure text decoration doesn't skip ink */
+  color: #9F9F9F;  /* Set the text color */
+}
+
+
+.quantity-input {
+  width: 50px;
+  height: 30px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Remove Icon Styling */
+.remove-item {
+  width: 30px;
+  text-align: center;
+  margin-left: 15px;  /* Move the remove icon slightly to the right */
+}
+
+
+
+
+
+/* Footer Styles */
+.features-section {
+  width: 100%;
+  height: 270px;
+  padding: 100px 0;
+  background: #FAF3EA;
+  margin: 0 auto;
+  display: flex;
+  margin-top: 70px;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 0 20px;
+}
+
+.feature-icon {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.feature-text {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.feature-title {
+  font-family: Poppins, sans-serif;  /* Apply Poppins font */
+  font-size: 25px;  /* Set font size */
+  font-weight: 600;  /* Set font weight */
+  line-height: 37.5px;  /* Set line height */
+  text-align: left;  /* Align text to the left */
+  text-underline-position: from-font;  /* Underline position from font */
+  text-decoration-skip-ink: none;  /* Ensure text decoration doesn't skip ink */
+  color: #242424;  /* Set text color */
+}
+
+
+.feature-subtitle {
+  font-family: Poppins, sans-serif;  /* Apply Poppins font */
+  font-size: 20px;  /* Set font size */
+  font-weight: 500;  /* Set font weight */
+  line-height: 30px;  /* Set line height */
+  text-align: left;  /* Align text to the left */
+  text-underline-position: from-font;  /* Underline position from font */
+  text-decoration-skip-ink: none;  /* Ensure text decoration doesn't skip ink */
+  color: #898989;  /* Set text color */
+}
+
+
