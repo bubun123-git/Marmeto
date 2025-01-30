@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Magmeto</title>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="header-container" role="banner">
+        <div class="nav-inner">
+            <div class="logo">
+                <img src="./ASSESTS/marmeto_logo.svg" alt="Marmeto Logo" class="logo-img" />
+                Магmeto
+            </div>
+
+            <!-- Center Navigation -->
+            <nav role="navigation">
+                <ul class="nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Right-side Icons -->
+            <div class="header-icons">
+                <a href="#" class="icon-link">
+                    <img src="./ASSESTS/search.svg" alt="Search" />
+                </a>
+                <a href="#" class="icon-link">
+                    <img src="./ASSESTS/heart.svg" alt="Wishlist" />
+                </a>
+                <a href="#" class="icon-link">
+                    <img src="./ASSESTS/cart.svg" alt="Shopping Cart" />
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- BANNER -->
+    <section class="cart-banner">
+        <img src="./ASSESTS/banner.svg" alt="Cart Banner Background" class="cart-bg-img" />
+        <div class="cart-overlay"></div>
+        <img src="./ASSESTS/marmeto_logo.svg" alt="Marmeto Logo" class="cart-logo" />
+        <div class="cart-content">
+            <h1 class="cart-title">Cart</h1>
+            <div class="breadcrumb">
+                <a href="#" class="home_banner">Home</a>
+                <span class="cart">Cart</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="cart-container">
+        <!-- CART DETAILS -->
+        <section class="cart-details">
+            <div class="table-header">
+                <div class="product">Product</div>
+                <div class="price">Price</div>
+                <div class="quantity">Quantity</div>
+                <div class="subtotal">Subtotal</div>
+            </div>
+        </section>
+    
+        <!-- CART TOTALS -->
+        <section class="cart-totals">
+            <h2 class="cart_totals_text">Cart Totals</h2>
+            <div class="totals-row">
+                <span class="totals-label">Subtotal</span>
+                <span class="totals-amount">Rs. 250,000.00</span>
+            </div>
+            <div class="totals-row">
+                <span class="totals-label">Total</span>
+                <span class="totals-amount total-amount">Rs. 250,000.00</span>
+            </div>
+            <button class="checkout-btn">Check Out</button>
+        </section>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
