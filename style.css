@@ -766,29 +766,89 @@ html {
   }
 }
 
-/* Small Mobile View (360px and below) */
-@media screen and (max-width: 360px) {
-  .nav-links {
-    gap: 10px;
-    font-size: 14px;
+/* Header Responsive Modifications */
+@media screen and (max-width: 768px) { /* Tablet */
+  .header-container {
+    width: 100%;
+    height: auto;
+    padding: 15px 0;
   }
 
-  .header-icons img {
-    width: 24px;
-    height: 24px;
+  .nav-inner {
+    position: relative;
+    width: 90%;
+    height: auto;
+    top: 0;
+    left: 0;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 15px;
   }
 
-  .cart-title {
+  .logo {
+    order: 1;
+    width: auto;
     font-size: 28px;
   }
 
-  .breadcrumb a,
-  .breadcrumb span {
-    font-size: 14px;
+  .nav-links {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 10px;
   }
 
-  .product-name {
-    font-size: 14px;
+  .header-icons {
+    order: 2;
+    gap: 20px;
   }
 }
 
+@media screen and (max-width: 480px) { /* Mobile */
+  .nav-inner {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+
+  .nav-links {
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+
+  .nav-links li {
+    font-size: 14px;
+  }
+
+  .header-icons {
+    gap: 15px;
+  }
+
+  .icon-link img {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media screen and (max-width: 360px) { /* Small Mobile */
+  .logo {
+    font-size: 22px;
+  }
+
+  .nav-links {
+    gap: 10px;
+  }
+
+  .nav-links li {
+    font-size: 13px;
+  }
+
+  .header-icons {
+    gap: 12px;
+  }
+}
