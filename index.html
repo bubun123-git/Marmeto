@@ -8,6 +8,11 @@
   </head>
 
   <body>
+    <!-- Loader -->
+    <div id="loader" class="loader">
+      <div class="spinner"></div>
+    </div>
+
     <!-- HEADER -->
     <header class="header-container" role="banner">
       <div class="nav-inner">
@@ -76,29 +81,7 @@
           <div class="quantity">Quantity</div>
           <div class="subtotal">Subtotal</div>
         </div>
-        <!-- FETCHED DATA -->
-        <div class="cart-item">
-          <div class="product-info">
-            <img
-              src="./ASSESTS/sofa.svg"
-              alt="Asgaard Sofa"
-              class="product-image"
-            />
-            <span class="product-name">Asgaard sofa</span>
-          </div>
-          <div class="product-price">Rs. 250,000.00</div>
-          <div class="product-quantity">
-            <input type="number" value="1" min="1" class="quantity-input" />
-          </div>
-          <div class="product-subtotal">Rs. 250,000.00</div>
-          <div class="remove-item">
-            <img
-              src="./ASSESTS/delete.svg"
-              alt="Remove Item"
-              class="delete-icon"
-            />
-          </div>
-        </div>
+        <!-- Dynamically populated cart items will go here -->
       </section>
 
       <!-- CART TOTALS -->
@@ -106,11 +89,11 @@
         <h2 class="cart_totals_text">Cart Totals</h2>
         <div class="totals-row">
           <span class="totals-label">Subtotal</span>
-          <span class="totals-amount">Rs. 250,000.00</span>
+          <span class="totals-amount">Rs. 0.00</span>
         </div>
         <div class="totals-row">
           <span class="totals-label">Total</span>
-          <span class="totals-amount total-amount">Rs. 250,000.00</span>
+          <span class="totals-amount total-amount">Rs. 0.00</span>
         </div>
         <button class="checkout-btn">Check Out</button>
       </section>
@@ -118,37 +101,64 @@
 
     <!-- FOOTER -->
     <div class="features-section">
-        <div class="feature">
-            <img src="./ASSESTS/trophy 1.svg" alt="High Quality" class="feature-icon">
-            <div class="feature-text">
-                <div class="feature-title">High Quality</div>
-                <div class="feature-subtitle">crafted from top materials</div>
-            </div>
+      <div class="feature">
+        <img
+          src="./ASSESTS/trophy 1.svg"
+          alt="High Quality"
+          class="feature-icon"
+        />
+        <div class="feature-text">
+          <div class="feature-title">High Quality</div>
+          <div class="feature-subtitle">crafted from top materials</div>
         </div>
+      </div>
 
-        <div class="feature">
-            <img src="./ASSESTS/guarantee.svg" alt="Warranty Protection" class="feature-icon">
-            <div class="feature-text">
-                <div class="feature-title">Warranty Protection</div>
-                <div class="feature-subtitle">Over 2 years</div>
-            </div>
+      <div class="feature">
+        <img
+          src="./ASSESTS/guarantee.svg"
+          alt="Warranty Protection"
+          class="feature-icon"
+        />
+        <div class="feature-text">
+          <div class="feature-title">Warranty Protection</div>
+          <div class="feature-subtitle">Over 2 years</div>
         </div>
+      </div>
 
-        <div class="feature">
-            <img src="./ASSESTS/customer-support.svg" alt="Free Shipping" class="feature-icon">
-            <div class="feature-text">
-                <div class="feature-title">Free Shipping</div>
-                <div class="feature-subtitle">Order over 150 $</div>
-            </div>
+      <div class="feature">
+        <img
+          src="./ASSESTS/customer-support.svg"
+          alt="Free Shipping"
+          class="feature-icon"
+        />
+        <div class="feature-text">
+          <div class="feature-title">Free Shipping</div>
+          <div class="feature-subtitle">Order over 150 $</div>
         </div>
+      </div>
 
-        <div class="feature">
-            <img src="./ASSESTS/customer-support.svg" alt="24/7 Support" class="feature-icon">
-            <div class="feature-text">
-                <div class="feature-title">24 / 7 Support</div>
-                <div class="feature-subtitle">Dedicated support</div>
-            </div>
+      <div class="feature">
+        <img
+          src="./ASSESTS/customer-support.svg"
+          alt="24/7 Support"
+          class="feature-icon"
+        />
+        <div class="feature-text">
+          <div class="feature-title">24 / 7 Support</div>
+          <div class="feature-subtitle">Dedicated support</div>
         </div>
+      </div>
+    </div>
+
+    <!-- Modal for Item Removal Confirmation -->
+    <div class="modal" id="removeItemModal">
+      <div class="modal-content">
+        <h2>Are you sure you want to remove this item?</h2>
+        <div class="modal-actions">
+          <button id="confirmRemove" class="confirm-btn">Yes, Remove</button>
+          <button id="cancelRemove" class="cancel-btn">Cancel</button>
+        </div>
+      </div>
     </div>
 
     <script src="./script.js"></script>
