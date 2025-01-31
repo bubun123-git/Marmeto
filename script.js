@@ -12,10 +12,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
             let totalAmount = 0; // Variable to track the total price
 
-            // Loop through the items and generate HTML
+            // Loop through the items and generate HTML for each cart item
             data.items.forEach(item => {
                 const itemSubtotal = item.price * item.quantity;
-                totalAmount += itemSubtotal; // Add item subtotal to the total price
+                totalAmount += itemSubtotal; // Add item subtotal to total
 
                 const itemHtml = `
                     <div class="cart-item" data-item-id="${item.id}">
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                 `;
 
-                // Append the item HTML to the cart container
+                // Append item HTML to cart container
                 cartItemContainer.innerHTML += itemHtml;
             });
 
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
             cartTotalsContainer.querySelector('.totals-amount').textContent = `Rs. ${data.items_subtotal_price.toLocaleString()}`;
             cartTotalsContainer.querySelector('.total-amount').textContent = `Rs. ${totalAmount.toLocaleString()}`;
 
-            // Handle quantity change
+            // Handle quantity change event
             document.querySelectorAll('.quantity-input').forEach(input => {
                 input.addEventListener('change', (e) => {
                     const itemId = e.target.getAttribute('data-item-id');
@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const modal = document.getElementById('removeItemModal');
             let itemToRemove = null;
 
-            // Handle item removal (show confirmation modal)
+            // Show modal for item removal
             document.querySelectorAll('.delete-icon').forEach(icon => {
                 icon.addEventListener('click', (e) => {
                     const itemId = e.target.getAttribute('data-item-id');
@@ -77,19 +77,19 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             });
 
-            // Handle modal confirm button
+            // Handle modal confirm button (remove item)
             document.getElementById('confirmRemove').addEventListener('click', () => {
-                // Remove the item from the DOM
+                // Remove item from DOM
                 const itemElement = document.querySelector(`.cart-item[data-item-id="${itemToRemove.id}"]`);
                 itemElement.remove();
 
-                // Remove the item from the data array and update totals
+                // Remove item from data array and update totals
                 data.items = data.items.filter(item => item.id != itemToRemove.id);
 
                 // Recalculate total amount
                 totalAmount = data.items.reduce((total, item) => total + (item.price * item.quantity), 0);
 
-                // Update the total amount displayed
+                // Update total amount displayed
                 cartTotalsContainer.querySelector('.total-amount').textContent = `Rs. ${totalAmount.toLocaleString()}`;
                 cartTotalsContainer.querySelector('.totals-amount').textContent = `Rs. ${totalAmount.toLocaleString()}`;
 
@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 modal.style.display = 'none';
             });
 
-            // Handle modal cancel button
+            // Handle modal cancel button (close modal without removal)
             document.getElementById('cancelRemove').addEventListener('click', () => {
                 modal.style.display = 'none'; // Close the modal without removing
             });
@@ -106,10 +106,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const checkoutBtn = cartTotalsContainer.querySelector('.checkout-btn');
             checkoutBtn.addEventListener('click', () => {
                 alert('Proceeding to checkout...');
-                // Here you can implement your actual checkout process
+                // Actual checkout process can be implemented here
             });
 
-            // Hide the loader once the data is loaded
+            // Hide the loader once data is loaded
             loader.style.display = 'none';  // Hide loader
         })
         .catch(error => {

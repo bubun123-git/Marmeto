@@ -782,6 +782,7 @@ html {
     height: auto;
     padding: 15px 0;
   }
+
   .nav-inner {
     position: relative;
     width: 90%;
@@ -792,112 +793,86 @@ html {
     flex-wrap: wrap;
     gap: 15px;
   }
+
   .logo {
     order: 1;
     width: auto;
-    font-size: 24px; /* Reduced font size for mobile */
-    text-align: left; /* Left align logo */
+    font-size: 28px;
   }
+
   .nav-links {
     order: 3;
     width: 100%;
-    justify-content: flex-start; /* Left align navigation links */
-    gap: 20px;
+    justify-content: center;
+    gap: 30px;
     margin-top: 10px;
   }
-  .nav-links a {
-    font-size: 14px; /* Reduce font size for nav links */
-    text-align: left; /* Ensure links are left aligned */
-  }
+
   .header-icons {
     order: 2;
-    gap: 15px; /* Reduced gap between items */
-    justify-content: flex-start;
-    display: flex;
-    flex-direction: column; /* Stack items vertically */
-    align-items: flex-start; /* Align all items to the left */
-  }
-
-  /* Ensure icons and text are properly aligned */
-  .header-icons i, .header-icons span {
-    display: flex;
-    align-items: center; /* Vertically align icon and text */
-    gap: 10px; /* Space between icon and text */
-    text-align: left; /* Align text left */
-    font-size: 14px; /* Ensure readable font size */
+    gap: 20px;
   }
 }
 
-/* Mobile Styles */
-@media screen and (max-width: 480px) {
-  .cart-item {
+@media screen and (max-width: 480px) { /* Mobile */
+  .nav-inner {
     flex-direction: column;
-    align-items: flex-start;
-    padding: 15px;
-    margin: 15px 0;
-    border-bottom: 1px solid #eee;
+    align-items: center;
+    gap: 12px;
+    padding: 0 5%;
   }
-  .product-info {
-    width: 100% !important;
-    margin-bottom: 15px;
-    text-align: left; /* Left align product info */
-  }
-  .product-image {
-    width: 80px !important;
-    height: 80px !important;
-  }
-  .product-name {
-    margin-left: 15px !important;
-    font-size: 13px !important; /* Further reduced font size */
-    text-align: left; /* Left align product name */
-  }
-  .product-price,
-  .product-quantity,
-  .product-subtotal {
-    width: 100% !important;
-    display: flex !important;
-    justify-content: space-between;
-    padding: 8px 0;
-    font-size: 13px !important; /* Further reduced font size */
-    text-align: left; /* Left align price, quantity, subtotal */
-  }
-  .quantity-input {
-    width: 60px !important;
-    height: 25px !important;
-    padding: 5px;
-  }
-  .delete-icon {
-    width: 20px !important;
-    height: 20px !important;
-  }
-}
 
-/* For smaller screens (360px and below) */
-@media screen and (max-width: 360px) {
-  .product-name {
-    font-size: 12px !important; /* Even smaller font size for very small screens */
-    text-align: left; /* Left align product name */
+  .logo {
+    font-size: 22px;
+    order: 1;
+    text-align: center;
+    width: 100%;
   }
-  
-  .product-price,
-  .product-quantity,
-  .product-subtotal {
-    font-size: 12px !important; /* Even smaller font size for very small screens */
-    text-align: left; /* Left align price, quantity, subtotal */
+
+  .nav-links {
+    order: 3;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin: 8px 0;
+  }
+
+  .nav-links li {
+    font-size: 13px;
+    padding: 4px 8px;
   }
 
   .header-icons {
-    display: flex;
-    flex-direction: column; /* Stack icons vertically */
-    align-items: flex-start; /* Align items to the left */
-    gap: 10px; /* Space between items */
+    order: 2;
+    gap: 18px;
+    justify-content: center;
+    width: 100%;
+    margin: 8px 0;
   }
 
-  .header-icons i, .header-icons span {
-    display: flex;
-    align-items: center; /* Align icons and text vertically */
-    gap: 10px; /* Space between icon and text */
+  .icon-link img {
+    width: 22px;
+    height: 22px;
   }
 }
 
+@media screen and (max-width: 360px) { /* Small Mobile */
+  .nav-links {
+    gap: 8px;
+  }
 
+  .nav-links li {
+    font-size: 12px;
+    padding: 3px 6px;
+  }
+
+  .header-icons {
+    gap: 15px;
+  }
+
+  .icon-link img {
+    width: 20px;
+    height: 20px;
+  }
+}
